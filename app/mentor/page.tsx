@@ -12,8 +12,8 @@ export default function Home() {
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Home Page</h1>
-            <p className="text-xl mb-8">Welcome to the main Page</p>
+            <h1 className="text-5xl font-bold mb-6">Mentors and Mentees</h1>
+            <p className="text-xl mb-8">Welcome to the Mentoe / Mentee page</p>
             <div className="space-x-4"></div>
           </div>
         </div>
@@ -23,9 +23,9 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            User Dashboard
+            Mentor dashboard
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             <Link href="/mentor">
               <Card className="p-6">
                 <div className="text-blue-500 mb-4">
@@ -60,7 +60,7 @@ export default function Home() {
                 development career.
               </p>
             </Card>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>
