@@ -12,13 +12,10 @@ export default function Home() {
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Connect. Learn. Grow.</h1>
-            <p className="text-xl mb-8">
-              Find your perfect mentor or share your knowledge with aspiring
-              developers.
-            </p>
+            <h1 className="text-5xl font-bold mb-6">Home Page</h1>
+            <p className="text-xl mb-8">Welcome to the main Page</p>
             <div className="space-x-4">
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 variant="secondary"
@@ -33,7 +30,7 @@ export default function Home() {
                 className="bg-transparent border-white text-white hover:bg-white hover:text-blue-600"
               >
                 <Link href="/auth/signin">Sign In</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -43,7 +40,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Choose SoC Legacy?
+            User Dashboard
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-6">
@@ -51,11 +48,10 @@ export default function Home() {
                 <Users className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Connect with Mentors
+                Search for Mentors / Mentees
               </h3>
               <p className="text-gray-600">
-                Find experienced developers who match your learning goals and
-                can guide your journey.
+                Find developers who are in need of help or offering help.
               </p>
             </Card>
             <Card className="p-6">
@@ -63,11 +59,10 @@ export default function Home() {
                 <Laptop className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Share Your Knowledge
+                Update your profile
               </h3>
               <p className="text-gray-600">
-                Give back to the community by mentoring aspiring developers and
-                helping them grow.
+                Update your skills and experience.
               </p>
             </Card>
             <Card className="p-6">
