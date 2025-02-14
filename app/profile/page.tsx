@@ -90,6 +90,7 @@ export default function Home() {
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
+            <img src="/img/school_of_codes_01.png" alt="School of Codes" className="mx-auto mb-8 w-20 bg-white p-1 rounded-lg shadow-lg" />
             <h1 className="text-5xl font-bold mb-6">User profile</h1>
             <p className="text-xl mb-8">Update profile</p>
             <div className="space-x-4"></div>
@@ -100,6 +101,9 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-[50rem]">
+          <Link href="/home">
+            <Button className="mb-4">Back to Home</Button>
+          </Link>
           {/* <h2 className="text-3xl font-bold text-center mb-12">User profile</h2> */}
           <Card className="p-6">
             <div className="text-blue-500 mb-4">

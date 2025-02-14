@@ -20,7 +20,7 @@ export default function Mentor() {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await fetch("http://localhost:3001/mentors");
+        const response = await fetch("http://localhost:3001/users");
         const data = await response.json();
         setMentors(data);
       } catch (error) {
@@ -41,7 +41,7 @@ export default function Mentor() {
   // Handle adding a new mentor
   const addMentor = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/mentors", {
+    fetch("http://localhost:3001/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newMentor),
@@ -56,7 +56,7 @@ export default function Mentor() {
 
   // Handle deleting a mentor
   const deleteMentor = (id) => {
-    fetch(`http://localhost:3001/mentors/${id}`, {
+    fetch(`http://localhost:3001/users/${id}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -74,7 +74,7 @@ export default function Mentor() {
   // Handle updating a mentor
   const updateMentor = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/mentors/${editMentor.id}`, {
+    fetch(`http://localhost:3001/users/${editMentor.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(editMentor),
@@ -96,6 +96,7 @@ export default function Mentor() {
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
+            <img src="/img/school_of_codes_01.png" alt="School of Codes" className="mx-auto mb-8 w-20 bg-white p-1 rounded-lg shadow-lg" />
             <h1 className="text-5xl font-bold mb-6">Mentors and Mentees</h1>
             <p className="text-xl mb-8">Welcome to the Mentor / Mentee page</p>
           </div>
@@ -105,6 +106,9 @@ export default function Mentor() {
       {/* Search Bar Section */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 text-center">
+          <Link href="/home">
+            <Button className="mb-4 mr-20">Back to Home</Button>
+          </Link>
           <input
             type="text"
             placeholder="Search mentors by name or skills"
