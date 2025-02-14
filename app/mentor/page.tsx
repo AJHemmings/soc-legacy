@@ -15,6 +15,7 @@ export default function Mentor() {
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [editMentor, setEditMentor] = useState(null); // Track which mentor to edit
+  const [sortOrder, setSortOrder] = useState("asc");
 
   // Fetch mentors on component mount
   useEffect(() => {
@@ -37,6 +38,19 @@ export default function Mentor() {
       mentor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       mentor.skills.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+    // Sort mentors by skill level
+    const sortMentors = (order) => {
+      const sortedMentors = [...filteredMentors].sort((a, b) => {
+        if (order === "asc") {
+          return a.level.localeCompare(b.level);
+        } else {
+          return b.level.localeCompare(a.level);
+        }
+      });
+      setMentors(sortedMentors);
+      setSortOrder(order);
+    };
 
   // Handle adding a new mentor
   const addMentor = (e) => {
@@ -112,6 +126,20 @@ export default function Mentor() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="p-2 border border-gray-300 rounded"
           />
+          <div className="mt-4">
+            <button
+              onClick={() => sortMentors("asc")}
+              className="bg-blue-500 text-white p-2 rounded mr-2"
+            >
+              Sort by Level Ascending
+            </button>
+            <button
+              onClick={() => sortMentors("desc")}
+              className="bg-blue-500 text-white p-2 rounded"
+            >
+              Sort by Level Descending
+            </button>
+          </div>
         </div>
       </section>
 
