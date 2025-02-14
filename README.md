@@ -1,6 +1,8 @@
 # SOC Legacy App
 
-The SOC Legacy App is a platform designed to connect developers of all skill levels, enabling them to find mentors and mentees, collaborate on projects, and access valuable resources. Built with **Next.js**, **TypeScript**, and **React**, this app aims to continue the legacy of the SOC (School of Code) cohort by fostering a supportive and collaborative developer community.
+The SOC Legacy App is a platform designed to connect developers of all skill levels, enabling them to find mentors and mentees, 
+collaborate on projects, and access valuable resources. Built with **Next.js**, **TypeScript**, and **React**, 
+this app aims to continue the legacy of the SOC (School of Code) cohort by fostering a supportive and collaborative developer community.
 
 ---
 
@@ -60,27 +62,6 @@ The SOC Legacy App is a platform designed to connect developers of all skill lev
    ```bash
    npm run dev
 
-### Folder Structure
-soc-legacy-app/
-├── app/
-│   ├── auth/                  # Authentication pages (future scope)
-│   ├── home/                  # Home page
-│   ├── learn/                 # Access to SOC lessons (future scope)
-│   ├── mentor/                # Mentor profiles and search
-│   ├── profile/               # User profile customization
-│   ├── globals.css            # Global styles
-│   ├── layout.tsx             # Root layout
-│   └── page.tsx               # Main page
-├── components/                # Reusable components
-├── hooks/                     # Custom hooks
-├── lib/                       # Utility functions
-├── public/                    # Static assets
-├── db.json                    # Mock database for JSON Server
-├── next.config.js             # Next.js configuration
-├── tailwind.config.ts         # Tailwind CSS configuration
-├── tsconfig.json              # TypeScript configuration
-└── README.md                  # Project documentation
-License
 
 ### This project is licensed under the MIT License. See the LICENSE file for details.
 ### Acknowledgments
