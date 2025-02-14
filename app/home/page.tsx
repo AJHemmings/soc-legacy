@@ -39,17 +39,19 @@ export default function Home() {
                 </p>
               </Card>
             </Link>
-            <Card className="p-6">
-              <div className="text-blue-500 mb-4">
-                <Laptop className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Update your profile
-              </h3>
-              <p className="text-gray-600">
-                Update your skills and experience.
-              </p>
-            </Card>
+            <Link href="/profile">
+              <Card className="p-6">
+                <div className="text-blue-500 mb-4">
+                  <Laptop className="w-12 h-12" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Update your profile
+                </h3>
+                <p className="text-gray-600">
+                  Update your skills and experience.
+                </p>
+              </Card>
+            </Link>
             <Card className="p-6">
               <div className="text-blue-500 mb-4">
                 <BookOpen className="w-12 h-12" />
