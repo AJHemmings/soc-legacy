@@ -6,8 +6,17 @@ import { Laptop, Users, BookOpen } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  const handleLogout = () => {
+    // Add your logout logic here
+    // For example, clear user session, tokens, etc.
+    window.location.href = "/";
+  };
+
   return (
     <main className="min-h-screen">
+      <Button onClick={handleLogout} className="absolute top-4 left-4">
+        Logout
+      </Button>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
