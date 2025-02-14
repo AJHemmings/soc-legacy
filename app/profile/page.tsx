@@ -84,8 +84,17 @@ export default function Home() {
     console.log("Updated user data:", userData);
   };
 
+  const handleLogout = () => {
+    // Add your logout logic here
+    // For example, clear user session, tokens, etc.
+    window.location.href = "/";
+  };
+
   return (
     <main className="min-h-screen">
+      <Button onClick={handleLogout} className="absolute top-4 left-4">
+        Logout
+      </Button>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-500 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -104,7 +113,6 @@ export default function Home() {
           <Link href="/home">
             <Button className="mb-4">Back to Home</Button>
           </Link>
-          {/* <h2 className="text-3xl font-bold text-center mb-12">User profile</h2> */}
           <Card className="p-6">
             <div className="text-blue-500 mb-4">
               <Laptop className="w-12 h-12" />
@@ -185,38 +193,7 @@ export default function Home() {
                 Update Profile
               </Button>
             </form>
-            {/* <h3 className="text-xl font-semibold mb-2">
-              Update your profile
-            </h3>
-            <p className="text-gray-600">
-              Update your skills and experience.
-            </p> */}
           </Card>
-          {/* <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/mentor">
-              <Card className="p-6">
-                <div className="text-blue-500 mb-4">
-                  <Users className="w-12 h-12" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">
-                  Search for Mentors / Mentees.
-                </h3>
-                <p className="text-gray-600">
-                  Find developers who are in need of help or offering help.
-                </p>
-              </Card>
-            </Link>
-            <Card className="p-6">
-              <div className="text-blue-500 mb-4">
-                <BookOpen className="w-12 h-12" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Learn and Grow</h3>
-              <p className="text-gray-600">
-                Access resources, join community projects, and accelerate your
-                development career.
-              </p>
-            </Card>
-          </div> */}
         </div>
       </section>
     </main>
