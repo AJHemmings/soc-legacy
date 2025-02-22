@@ -1,5 +1,6 @@
 # SOC Legacy App
 
+Designed and built in under 12 hours for a School of Code hackathon project
 The SOC Legacy App is a platform designed to connect developers of all skill levels, enabling them to find mentors and mentees, 
 collaborate on projects, and access valuable resources. Built with **Next.js**, **TypeScript**, and **React**, 
 this app aims to continue the legacy of the SOC (School of Code) cohort by fostering a supportive and collaborative developer community.
@@ -49,10 +50,10 @@ this app aims to continue the legacy of the SOC (School of Code) cohort by foste
    git clone https://github.com/your-username/soc-legacy-app.git
    cd soc-legacy-app
 
-2. **Install dependencies88:
+2. **Install dependencies**:
    ```bash
    npm install --legacy-peer-deps
-3. **Set up JSON Server88:
+3. **Set up JSON Server**:
    ```bash
    npm install -g json-server
 4. **Run the development server**:
